@@ -35,6 +35,7 @@ urlpatterns = [
     path('', root, name='root'),
     path('admin/', admin.site.urls),
     path('api/', include((api_urlpatterns, 'api'))),
+    path('api/auth/', include((auth_urlpatterns, 'api-auth'))), 
     path('docs/', include_docs_urls(
         title='Owen_drt_api',
         permission_classes=[IsAdminUser]
